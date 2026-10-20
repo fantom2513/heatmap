@@ -1,0 +1,7 @@
+model,CC,NSS,KLDiv,AUC_Judd,fairness
+ensemble_sum_umsi,0.81,1.9968,0.4637,0.869,home (both members trained on UEyes)
+sum,0.7839,1.9086,0.4858,0.8602,home (trained on UEyes)
+umsi_pp,0.7436,1.854,0.5571,0.8591,home (trained on UEyes)
+ours,0.6563,1.5738,0.7128,0.8292,home (trained on UEyes Train)
+transalnet,0.4193,1.01,1.1621,0.748,away (fair)
+legacy_zeros,0.403,1.0187,1.1318,0.7503,away (fair)

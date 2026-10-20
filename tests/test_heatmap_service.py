@@ -8,6 +8,7 @@ from PIL import Image
 
 # Моки уже настроены в conftest.py
 from src.services.heatmap_service import HeatmapService
+from src.exceptions import ModelLoadError
 
 
 @patch('src.services.heatmap_service.SaliencyPredictor')
@@ -30,7 +31,7 @@ def test_heatmap_service_init_file_not_found(mock_exists, mock_predictor):
     """Тест инициализации HeatmapService когда файл не найден"""
     mock_exists.return_value = False
     
-    with pytest.raises(FileNotFoundError):
+    with pytest.raises(ModelLoadError):
         HeatmapService(model_path="/test/path/model.pth")
 
 
