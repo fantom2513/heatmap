@@ -1,8 +1,8 @@
-# Heatmapy
+# Heatmap
 
 **A visual-attention prediction service for interface screenshots.**
 
-Heatmapy turns an uploaded image into a saliency overlay through a FastAPI service and a PyTorch model. Extracted from a larger application, this repository presents the inference pipeline and the surviving experimental evidence in one place.
+Heatmap turns an uploaded image into a saliency overlay through a FastAPI service and a PyTorch model. Extracted from a larger application, this repository presents the inference pipeline and the surviving experimental evidence in one place.
 
 > Predicted saliency is a model estimate, not measured eye tracking, a click heatmap, or a prediction of first fixation. The final overlay also includes a contrast heuristic.
 
@@ -52,8 +52,8 @@ The upload response contains `blended_png_base64`: a Base64-encoded PNG. The hea
 ## Docker
 
 ```bash
-docker build -t heatmapy .
-docker run --rm -p 8002:8002 -v "${PWD}/models:/app/models:ro" heatmapy
+docker build -t heatmap .
+docker run --rm -p 8002:8002 -v "${PWD}/models:/app/models:ro" heatmap
 ```
 
 Run from the repository root with a compatible checkpoint in `models/`. Dependencies are inherited from the source service and are not pinned; the container build has not yet been verified.

@@ -23,4 +23,4 @@ The original `fastapi[test]` dependency extra no longer installed the required t
 - A fresh clone has no checkpoint. The local checkpoint is ignored by Git, pending a public distribution decision.
 - Existing model preprocessing and overlay channel ordering have not been changed or independently validated for color fidelity. Two auxiliary channels are zero-filled.
 - The health endpoint's inherited error path constructs a string representation of a dictionary with an application/json media type. Valid JSON on that failure path has not been established or repaired in this extraction.
-- Public repository: https://github.com/fantom2513/heatmapy. GitHub CLI authentication works outside the restricted execution sandbox; earlier authentication errors from that sandbox did not establish that the account token was invalid.
+- Public repository: https://github.com/fantom2513/heatmap. GitHub CLI authentication works outside the restricted execution sandbox; earlier authentication errors from that sandbox did not establish that the account token was invalid.
